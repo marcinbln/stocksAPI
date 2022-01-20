@@ -26,7 +26,7 @@ async def getItems():
 
 @app.get("/dupa2")
 async def getItems():
-    return Response(createListDaysFalling)
+    return Response()
 
 createListDaysFalling.create_list_days_falling()
 
