@@ -2,7 +2,7 @@ from fastapi import FastAPI, Response
 import investpy
 import pandas as pd
 
-import createListDaysFalling
+import create_list_days_falling
 from get_no_days_falling import get_no_days_falling
 
 app = FastAPI()
@@ -23,11 +23,10 @@ async def root():
 async def getItems():
     return Response(js)
 
-
 @app.get("/dupa2")
 async def getItems():
     return Response()
 
-createListDaysFalling.create_list_days_falling()
+create_list_days_falling.create_list_days_falling()
 
 # uvicorn main:app --reload
