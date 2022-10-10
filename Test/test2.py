@@ -14,4 +14,12 @@ for tuple in filtered.itertuples(index=False):
 
 start_time = time.time()
 
+df = investpy.get_stock_historical_data(stock='AAPL',
+                                        country='United States',
+                                        from_date='01/01/2020',
+                                        to_date='10/01/2020')
+
+js = df.to_json(orient='table')
+
+
 print("--- %s seconds ---" % (time.time() - start_time))

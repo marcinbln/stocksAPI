@@ -10,3 +10,4 @@ def get_no_days_falling(stockname: str):
         number += 1
 
     return number
+
